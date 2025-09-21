@@ -70,16 +70,16 @@ local function call(konstantType, scriptPath)
 	end
 end
 
-local function decompile(scriptPath)
+local function decompile_no(scriptPath)
 	return call("/konstant/decompile", scriptPath)
 end
 
-local function disassemble(scriptPath)
+local function disassemble_no(scriptPath)
 	return call("/konstant/disassemble", scriptPath)
 end
 
-getgenv().decompile = decompile
-getgenv().disassemble = disassemble
+--getgenv().decompile = decompile_no
+--getgenv().disassemble = disassemble_no
 
 local global_container
 do
